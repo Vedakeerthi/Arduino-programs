@@ -3,6 +3,7 @@ A repository of programs that helps in programming Arduino UNO board. The UNO bo
 
 * Distance calculation using ultrasonic sensor
 * Moisture content in agricultural land
+* Motion detection
 <br/>
 
 # **Distance calculation using ultrasonic sensor :**
@@ -28,3 +29,11 @@ In the code, the buzzer, led light1, led light2, led light3 are defined in the p
 > moisture = 100 - ((sensorvalue/1023.00)*100)
 
 If the sensorvalue is greater than 1000, it prints as 'Not in soil or disconnected', if the sensor value is lesser than 1000 and greater than 600, it makes the led light1 as high and prints 'Dry soil' and makes the buzzer ring, else if the sensor value is lesser than 600 and greater than 370, it makes the led light 2 high and prints as 'Humid soil', else the led light 3 is made high and it is identified as 'Water soil'.
+
+# **Motion detection :**
+
+An LDR (Light dependent resistor) is a component that has a resistance that changes with the light intensity that falls upon it, this allows them to be used in light sensing circuits. A photoresistor can have a resistance as high as several mega ohms, while in the light, a photo resistor can have a resistance as low as a few hundred ohms. If incident light on a photo resistor exceeds a certain frequency, photons absorbed by the semiconductor give bound to electrons enough energy to jump to the conduction band. The resulting free electorns conduct electricity, which acts like a switch.
+
+PIR sensor detects a human being moving around within approximately 10m from the sensor. PIR are fundamentally made of a pyro electric sensor, which can detect levels of infrared radiation. These sensors are incredible, that are flat control and minimal effort, and have a wide lens range, and are simple to interact with, by the use of PIR sensor we are going to detect motion.
+
+According to the code, we initialized the sensor, a buzzer and a led light to the pins 2, 11, 13 respectively, and the sensor is setup as input and the other two as output. In the loop section, if the value read by the sensor is high, and the state is low, it is printed as 'Motion detected', then the buzzer is made to ring for one second, then the light is made to high, and the state is declared to high. The state is a variable which is made to be low while initializing since no motion is detected in the first time. Else if the state is high it is printed as the 'Motion is stopped' then the led light is made to stop and the state is setup to low. This is how the motion detection works.
