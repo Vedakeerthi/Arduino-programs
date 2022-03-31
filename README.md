@@ -5,6 +5,7 @@ A repository of programs that helps in programming Arduino UNO board. The UNO bo
 * Moisture content in agricultural land
 * Motion detection
 * Room temperature and humidity detection
+* Colour recognition using arduino
 <br/>
 
 # **Distance calculation using ultrasonic sensor :**
@@ -47,4 +48,11 @@ According to the code, we initialized the sensor, a buzzer and a led light to th
 DHT11 is the sensor used for sensing temperature and humidity, it consists of a capacitive humidity sensing element and a thermistor for sensing temperature. The humidity sensing capacitor has two electrodes with a moisture holding substrate as a dielectric between them, change in the capacitance value occurs with the change in humidity levels. For measuring temperature the sensor uses a negative temperature coefficient thermistor, which causes a decrease in its resistance value with increase in temperature.
 
 In the code, the DHT module is used and the pin and type of dht are specified accordingly. Once its done then a buzzer and three led along with they are specified as output in the setup loop and dht is made to begin. In the loop function, the humidity and the temperature is read and stored in the variable h and t respectively using the inbuilt functions in the dht module, then the values are printed and if the temperature is greater than 29 the buzzer is made to ring and a led light is made to lit else the second led is made to lit and printed as low temperature.
+<br/>
+
+# **Colour recognition using arduino :**
+
+The TCS230 colour sensor is quite popular, inexpensive and easy to use, it consists of an RGB sensor chip, that can detect and measure an almost infinite range of visible colours. The sensor can be seen at the center of the module, surrounded by the four white LEDs. Because of these LEDs, the sensor can also work in complete darkness to determine the colour or brightness of the object. 
+
+In the code, we define the module pins and a variable data of int type is initialized with the value 0. In the setup function the out pin is set as input and the others as output. Meanwhile in the loop function, s2, s3 is made to low and the red value is printed from the function _getdata()_, next to that the s2 is made low and the s3 is made to high, after that the blue value is printed from the _getdata()_ function, and s2, s3 is made high and the green value is printed from the same _getdata()_ function. In the getdata function, the data is varied by the frequency as the sensor gives a frequency depending on the color. Thus the color of different frequencies are found using the arduino.
 <br/>
