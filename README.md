@@ -6,6 +6,7 @@ A repository of programs that helps in programming Arduino UNO board. The UNO bo
 * Motion detection
 * Room temperature and humidity detection
 * Colour recognition using arduino
+* Fire alarm indicator using arduino
 <br/>
 
 # **Distance calculation using ultrasonic sensor :**
@@ -56,3 +57,13 @@ The TCS230 colour sensor is quite popular, inexpensive and easy to use, it consi
 
 In the code, we define the module pins and a variable data of int type is initialized with the value 0. In the setup function the out pin is set as input and the others as output. Meanwhile in the loop function, s2, s3 is made to low and the red value is printed from the function _getdata()_, next to that the s2 is made low and the s3 is made to high, after that the blue value is printed from the _getdata()_ function, and s2, s3 is made high and the green value is printed from the same _getdata()_ function. In the getdata function, the data is varied by the frequency as the sensor gives a frequency depending on the color. Thus the color of different frequencies are found using the arduino.
 <br/>
+
+# **Fire alarm indicator using arduino :**
+
+A flame sensor is one kind of detector which is mainly designed for detecting a well as responding to the occurence to the occurence of a fire or flame. The flame detection response can depend on its fitting. It includes an alarm system, a natural gas line, propane & a fire suppression system. This sensor is used in industrial boilers. The response of these sensors is faster as well as more accurate compare with a heat/smoke detector because of its mechanism while detecting the flame.
+
+This sensor/detector can be built with an electronic circuit using a receiver like electromagnetic radiation. This sensor uses the infrared flame flash method, which allows the sensor to work through a coating of oil, dust, water vapour, otherwise ice.
+
+By the instruction and after connections, the setup loop is declaring the pins and which pins corresponds to output and the others as input, based on the requirements use led and buzzer. In the loop, the analog reading of the sensor is obtained, then with the given range the obtained value is mapped with the sensor minimum and maximum value, then a value with 0 indicates 'close fire', a value with 1 indicates 'distant fire', and in the case of 2 it indicates 'no fire', and based on which the led lights are lit and the buzzers are made to ring.
+<br>
+
