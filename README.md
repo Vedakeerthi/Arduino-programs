@@ -7,6 +7,7 @@ A repository of programs that helps in programming Arduino UNO board. The UNO bo
 * Room temperature and humidity detection
 * Colour recognition using arduino
 * Fire alarm indicator using arduino
+* Sound detection using arduino
 <br/>
 
 # **Distance calculation using ultrasonic sensor :**
@@ -67,3 +68,9 @@ This sensor/detector can be built with an electronic circuit using a receiver li
 By the instruction and after connections, the setup loop is declaring the pins and which pins corresponds to output and the others as input, based on the requirements use led and buzzer. In the loop, the analog reading of the sensor is obtained, then with the given range the obtained value is mapped with the sensor minimum and maximum value, then a value with 0 indicates 'close fire', a value with 1 indicates 'distant fire', and in the case of 2 it indicates 'no fire', and based on which the led lights are lit and the buzzers are made to ring.
 <br>
 
+# **Sound detection using arduino :**
+
+The microphone sound sensor, detects sound. It gives a measurement of how loud a sound is. There are wide variety of these sensors, this microphone sensor will detect the sound intensity of your surroundings and will light up an LED if the sound intensity is above a certain threshold. 
+
+A basic and a simple program, where the input and the output pins of the arduino are set in the setup loop and the threshold is also set, which is used to detect the sound based on the threshold, it is basically an integer value. Then in the loop function, the analog value from the sensor is attained, then if the analog value is greater than the threshold then the led is made to blink and it prints output as 'Sound detected' else 'Sound not detected'.
+<br>
