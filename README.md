@@ -8,6 +8,8 @@ A repository of programs that helps in programming Arduino UNO board. The UNO bo
 * Colour recognition using arduino
 * Fire alarm indicator using arduino
 * Sound detection using arduino
+* Interfacing flex sensor with arduino
+* Interfacing force pressure sensor with arduino
 <br/>
 
 # **Distance calculation using ultrasonic sensor :**
@@ -73,4 +75,20 @@ By the instruction and after connections, the setup loop is declaring the pins a
 The microphone sound sensor, detects sound. It gives a measurement of how loud a sound is. There are wide variety of these sensors, this microphone sensor will detect the sound intensity of your surroundings and will light up an LED if the sound intensity is above a certain threshold. 
 
 A basic and a simple program, where the input and the output pins of the arduino are set in the setup loop and the threshold is also set, which is used to detect the sound based on the threshold, it is basically an integer value. Then in the loop function, the analog value from the sensor is attained, then if the analog value is greater than the threshold then the led is made to blink and it prints output as 'Sound detected' else 'Sound not detected'.
+<br>
+
+# **Interfacing flex sensor with arduino :**
+
+A flex sensor is a kind of sensor which is used to measure the amount of defection otherwise bending. The carbon surface is arranged on a plastic strip as this strip is turned aside then the sensor’s resistance will be changed. Thus, it is also named a bend sensor.
+
+Based on the code, the flexpin and the ledpin are initialized and setup in the setup loop and the analog value given by the flexpin is acquired and based on some threshold the led is made to lit, the more the sensor bends the higher its resistance.
+<br>
+
+# **Interfacing force pressure sensor with arduino :**
+
+The working principle of a force sensor is that it responds to the applied force, as well as converts the value to a measurable quantity. Most force sensors are created with the use of force-sensing resistors. Such sensors consists of electrodes and sensing film.
+
+Force-sensing resistors are based on contact resistance. These contain a conductive polymer film, which changes its resistance in a predictable way once force is applied on the surface.
+
+The module FORCE_SENSOR_PIN_AO is defined and the analog reading from the sensor is obtained, and by which if the analog reading is less than 10 it returns as 'no pressure', and if the analog reading is less than 200 it is said to print as 'light touch', and if the analog reading is less than 500 and greater than 200 it will print as 'light pressure' and if the analog reading is less than 800 and greater than 500, the result will be 'medium pressure' else the sensor will result in some 'big pressure'. 
 <br>
